@@ -206,10 +206,13 @@ display:inline-block;
 margin-right:25px;
 }
 .about ul li a.fb{
-background: url(../images/icons.png) no-repeat 0px 0px;
-width:72px;
-height:72px;
+background: url(../images/Facebook-black.svg) no-repeat 0px 0px;
+width:60px;
+height:60px;
 display:block;
+}
+.about ul li a.fb:hover{
+background: url(../images/Facebook-color.svg) no-repeat 0px -71px;
 }
 .about ul li a.twit{
 background: url(../images/icons.png) no-repeat -99px 0px;
@@ -256,9 +259,7 @@ display:block;
 .about ul li a.pin:hover{
 background: url(../images/icons.png) no-repeat -499px -71px;
 }
-.about ul li a.fb:hover{
-background: url(../images/icons.png) no-repeat 0px -71px;
-}
+
 /*--//about--*/
 /*--my skill--*/
 .my-skills{

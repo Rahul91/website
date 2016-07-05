@@ -140,16 +140,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<div class="container">
 		<h3>ABOUT ME</h3>
 		<div class="strip text-center"><img src="images/about.png" alt=" "/></div>
-		<p>Dyin' ain't much of a livin', boy. here. put that in your report!" and "i may have found 
-		a way out of here. you want a guarantee, buy a toaster. here. put that in your report!" and 
-		"i may have found a way out of here. this is the ak-47 assault rifle, the preferred weapon of 
-		your enemy; and it makes a distinctive sound when fired at you, so remember it. this is the ak-47 
-		assault rifle, the preferred weapon of your enemy; and it makes a distinctive sound when fired at 
-		you, so remember it. don't p!ss down my back and tell me it's raining. this is the ak-47 assault 
-		rifle, the preferred weapon of your enemy; and it makes a distinctive sound when fired at you, 
-		so remember it. don't p!ss down my back and tell me it's raining. this is my gun, clyde! man's 
-		gotta know his limitations. ever notice how sometimes you come across somebody you shouldn't have 
-		f**ked with? well, i'm that guy.</p>
+		<p>I’m Rahul Mishra. My friends call me “Mishra,” and it just kind of stuck. 
+		   I’m currently based in Pune, but previously lived in Kolkata. There are plenty of ways to 
+		   reach me below if you’re interested in a collaboration or want to follow my work.
+		   I’m on Twitter and GitHub and always love hearing about new projects. I am currently working
+		   as as Full Stack Developer in a Pune based startup. I love open source projects and contribute to them 
+		   as well.</p>
 		<ul>
 			<li><a class="fb" href="#"></a></li>
 			<li><a class="twit" href="#"></a></li>
@@ -163,55 +159,104 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!--//about-->
 <div class="about-back"></div>
 <!--my skill-->
-<div class="my-skills text-center">
+<div class="my-skills text-center" id="my-skill">
 	<div class="container">
 		<h3>MY SKILLS</h3>
 		<div class="strip text-center"><img src="images/skill.png" alt=" "/></div>
 		<div class="skill-grids">
 					<div class="col-md-2 skills-grid text-center">
 						<div class="circle" id="circles-1"></div>
-						<p>Photoshop</p>
+						<p>Python Flask/Django</p>
 					</div>
 					<div class="col-md-2 skills-grid text-center">
 						<div class="circle" id="circles-2"></div>
-						<p>Illustrator</p>
+						<p>JavaScript AngularJS/Jquery</p>
 					</div>
 					<div class="col-md-2 skills-grid text-center">
 						<div class="circle" id="circles-3"></div>
-						<p>Photography</p>
+						<p>Devops Docker/Nginx</p>
 					</div>
 					<div class="col-md-2 skills-grid text-center">
 						<div class="circle" id="circles-4"></div>
-						<p>Html 5 / CSS 3</p>
+						<p>Html / CSS 3</p>
 					</div>
 					<div class="col-md-2 skills-grid text-center">
 						<div class="circle" id="circles-5"></div>
-						<p>C4D</p>
+						<p>Bootstrap</p>
 					</div>
 					<div class="col-md-2 skills-grid text-center">
 						<div class="circle" id="circles-6"></div>
-						<p>After Effect</p>
+						<p>Sql Mysql/Sql Alchemy</p>
 					</div>
 					<div class="clearfix"> </div>
 				 <script type="text/javascript" src="js/circles.js"></script>
 					         <script>
-								var colors = [
+								 var colors = [
 										['#6ed4c0', '#ffffff'], ['#6ed4c0', '#ffffff'], ['#6ed4c0', '#ffffff'], ['#6ed4c0', '#ffffff'], ['#6ed4c0', '#ffffff'], ['#6ed4c0', '#ffffff']
 									];
-								for (var i = 1; i <= 7; i++) {
-									var child = document.getElementById('circles-' + i),
-										percentage = 30 + (i * 10);
+								var display = 0;
+								 $(document).on('scroll', function() {
+									if($(this).scrollTop()>=$('#my-skill').position().top){
+										if (display == 0){
+											for (var i = 1; i <= 7; i++) {
+												var child = document.getElementById('circles-' + i)
+												if (i == 1){
+													percentage = 90;
+												}else if (i == 2){
+													percentage = 75;
+												}else if (i == 3){
+													percentage = 85;
+												}else if (i == 4){
+													percentage = 70;
+												}else if (i == 5){
+													percentage = 80;
+												}else{
+													percentage = 90;
+												}
+													
+												Circles.create({
+													id:         child.id,
+													percentage: percentage,
+													radius:     80,
+													width:      10,
+													number:   	percentage / 1,
+													text:       '%',
+													duration:    800,
+													colors:     colors[i - 1]
+												});
+											}
+										}
+										display += 1;
+									}
+								})
+								
+								// for (var i = 1; i <= 7; i++) {
+								// 	var child = document.getElementById('circles-' + i)
+								// 	if (i == 1){
+								// 		percentage = 90;
+								// 	}else if (i == 2){
+								// 		percentage = 75;
+								// 	}else if (i == 3){
+								// 		percentage = 85;
+								// 	}else if (i == 4){
+								// 		percentage = 70;
+								// 	}else if (i == 5){
+								// 		percentage = 80;
+								// 	}else{
+								// 		percentage = 90;
+								// 	}
 										
-									Circles.create({
-										id:         child.id,
-										percentage: percentage,
-										radius:     80,
-										width:      10,
-										number:   	percentage / 1,
-										text:       '%',
-										colors:     colors[i - 1]
-									});
-								}
+								// 	Circles.create({
+								// 		id:         child.id,
+								// 		percentage: percentage,
+								// 		radius:     80,
+								// 		width:      10,
+								// 		number:   	percentage / 1,
+								// 		text:       '%',
+								// 		duration:    3000,
+								// 		colors:     colors[i - 1]
+								// 	});
+								// }
 						
 				</script>
 		</div>
@@ -228,44 +273,59 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="strip text-center"><img src="images/edu.png" alt=" "/></div>
 		<div class="edu-grids">
 			<div class="col-md-4 edu-grid">
-				<p>2012 - 2013</p><span>Graduated</span>
+				<p>2010 - 2014</p><span>Graduated</span>
 				<img src="images/arrow.png" alt=""/>
 				<div class="edu-border">
 					<div class="edu-grid-master">
-						<h3>MASTER DEGREE OF COMPUTER SCIENCE</h3>
-						<h4>Oxford University</h4>
+						<h3>BACHELORS</h3>
+						<h4>Netaji Subhash Engineering College</h4>
 					</div>
 					<div class="edu-grid-info">
-						<h5>This is Photoshop's version Lorem Ipsum. 
-						Well, the way they make shows is, they make one show.</h5>
+						<h5>
+							<ul style="text-align:left">
+								<li>Stream: Computer Science</li>
+								<li>DGPA: 8.48</li>
+								<li>University: WBUT</li>
+							</ul>
+						</h5>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-4 edu-grid">
-				<p>2012 - 2013</p><span>Graduated</span>
+				<p>2009 - 2010</p><span>Intermidiate</span>
 				<img src="images/arrow.png" alt=""/>
 				<div class="edu-border">
 					<div class="edu-grid-master">
-						<h3>MASTER DEGREE OF COMPUTER SCIENCE</h3>
-						<h4>Oxford University</h4>
+						<h3>INTERMIDIATE</h3>
+						<h4>DAV Public School</h4>
 					</div>
 					<div class="edu-grid-info">
-						<h5>This is Photoshop's version Lorem Ipsum. 
-						Well, the way they make shows is, they make one show.</h5>
+						<h5>
+							<ul style="text-align:left">
+								<li>Stream: Pure Science</li>
+								<li>Percentage: 84%</li>
+								<li>Board: CBSE</li>
+							</ul>
+						</h5>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-4 edu-grid">
-				<p>2012 - 2013</p><span>Graduated</span>
+				<p>2007 - 2008</p><span>Matriculation</span>
 				<img src="images/arrow.png" alt=""/>
 				<div class="edu-border">
 					<div class="edu-grid-master">
-						<h3>MASTER DEGREE OF COMPUTER SCIENCE</h3>
-						<h4>Oxford University</h4>
+						<h3>MATRICULATION</h3>
+						<h4>DAV Public School</h4>
 					</div>
 					<div class="edu-grid-info">
-						<h5>This is Photoshop's version Lorem Ipsum. 
-						Well, the way they make shows is, they make one show.</h5>
+						<h5>
+							<ul style="text-align:left">
+								<li>Stream: Science</li>
+								<li>Percentage: 89%</li>
+								<li>Board: CBSE</li>
+							</ul>
+						</h5>
 					</div>
 				</div>
 			</div>
