@@ -198,6 +198,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								 $(document).on('scroll', function() {
 									if($(this).scrollTop()>=$('#my-skill').position().top){
 										if (display == 0){
+											display = 1;
 											for (var i = 1; i <= 7; i++) {
 												var child = document.getElementById('circles-' + i)
 												if (i == 1){
@@ -221,43 +222,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 													width:      10,
 													number:   	percentage / 1,
 													text:       '%',
-													duration:    800,
+													duration:    1500,
 													colors:     colors[i - 1]
 												});
+											setTimeout(function(){}, 1000);
 											}
 										}
-										display += 1;
 									}
 								})
-								
-								// for (var i = 1; i <= 7; i++) {
-								// 	var child = document.getElementById('circles-' + i)
-								// 	if (i == 1){
-								// 		percentage = 90;
-								// 	}else if (i == 2){
-								// 		percentage = 75;
-								// 	}else if (i == 3){
-								// 		percentage = 85;
-								// 	}else if (i == 4){
-								// 		percentage = 70;
-								// 	}else if (i == 5){
-								// 		percentage = 80;
-								// 	}else{
-								// 		percentage = 90;
-								// 	}
-										
-								// 	Circles.create({
-								// 		id:         child.id,
-								// 		percentage: percentage,
-								// 		radius:     80,
-								// 		width:      10,
-								// 		number:   	percentage / 1,
-								// 		text:       '%',
-								// 		duration:    3000,
-								// 		colors:     colors[i - 1]
-								// 	});
-								// }
-						
 				</script>
 		</div>
 	</div>	
@@ -435,14 +407,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!--portfolio-->
 <div class="gallery-section text-center" id="portfolio">
 	<div class="container">
-		<h3>PORTFOLIO</h3>
+		<h3>PROJECTS</h3>
 		<div class="strip text-center"><img src="images/port.png" alt=" "/></div>
-		<p>You think water moves fast? You should see ice. It moves like it has a mind. 
-		Like it knows it killed the world once and got a taste for murder. After the avalanche, 
-		it took us a week to climb out. Now, I don't know exactly when we turned on each other, 
-		but I know that seven of us survived the slide and only five made it out. Now we took an 
-		oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, 
-		but it wasn't. Nature is lethal but it doesn't hold a candle to man.</p>
+		<p>The following projects are live on github, majorly just hobby projects.</p>
 		<div class="gallery-grids">
 			<div class="top-gallery">
 				<!--<div class="col-md-4 gallery-grid">
@@ -458,8 +425,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="col-md-4 w-grid" style="padding-bottom: 15px; opacity: .8;">
 					<div class="work-grid-project">
 						<h3>Jira Automation</h3>
-						<div class="work-grid-info" style="min-height:200px; text-align:left;">
-							<a href="http://rahul91.github.io/GitGui/" target="_blank"><p>
+						<div class="work-grid-info" style="text-align:left;">
+							<a href="http://rahul91.github.io/Jira-Automation/" target="_blank"><p>
 								Logging work to your assigned unresolved tickets, given that you are using atlassian Jira can be automated through cli. 
 								The shell scripts automatically log work, in case of commit, eihter you are working on git or svn or Mercurial
 								</a></p>
@@ -468,41 +435,40 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</div>
 				<div class="col-md-4 w-grid" style="padding-bottom: 15px; opacity: .8;">
 					<div class="work-grid-project">
-						<h3>Jira Automation</h3>
-						<div class="work-grid-info" style="min-height:200px; text-align:left;">
+						<h3>Community News</h3>
+						<div class="work-grid-info" style="text-align:left;">
+							<a href="http://rahul91.github.io/CommunityNewsPortal/" target="_blank"><p>
+								A ycombinator News website Built using django, the project is deployed on heroku.
+							</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 w-grid" style="padding-bottom: 15px; opacity: .8;">
+					<div class="work-grid-project">
+						<h3>GitGui</h3>
+						<div class="work-grid-info" style="text-align:left;">
 							<a href="http://rahul91.github.io/GitGui/" target="_blank"><p>
-								Logging work to your assigned unresolved tickets, given that you are using atlassian Jira can be automated through cli. 
-								The shell scripts automatically log work, in case of commit, eihter you are working on git or svn or Mercurial
-								</a></p>
+							A python GUI based application/package that lets you push a file to your Github
+							easily, without any difficulties. If you are
+							too lazy to add and commit through command prompt, then this app/package is for you .	
+							</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 w-grid" style="padding-bottom: 15px; opacity: .8;">
+					<div class="work-grid-project">
+						<h3>GreenGIT</h3>
+						<div class="work-grid-info" style="text-align:left;">
+							<a href="http://rahul91.github.io/GreenGIT/" target="_blank"><p>
+								Harvest your Github using GreenGIT. A
+								python based web application</a></p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4 w-grid" style="padding-bottom: 15px; opacity: .8;">
 					<div class="work-grid-project">
 						<h3>Jira Automation</h3>
-						<div class="work-grid-info" style="min-height:200px; text-align:left;">
-							<a href="http://rahul91.github.io/GitGui/" target="_blank"><p>
-								Logging work to your assigned unresolved tickets, given that you are using atlassian Jira can be automated through cli. 
-								The shell scripts automatically log work, in case of commit, eihter you are working on git or svn or Mercurial
-								</a></p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 w-grid" style="padding-bottom: 15px; opacity: .8;">
-					<div class="work-grid-project">
-						<h3>Jira Automation</h3>
-						<div class="work-grid-info" style="min-height:200px; text-align:left;">
-							<a href="http://rahul91.github.io/GitGui/" target="_blank"><p>
-								Logging work to your assigned unresolved tickets, given that you are using atlassian Jira can be automated through cli. 
-								The shell scripts automatically log work, in case of commit, eihter you are working on git or svn or Mercurial
-								</a></p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 w-grid" style="padding-bottom: 15px; opacity: .8;">
-					<div class="work-grid-project">
-						<h3>Jira Automation</h3>
-						<div class="work-grid-info" style="min-height:200px; text-align:left;">
+						<div class="work-grid-info" style="text-align:left;">
 							<a href="http://rahul91.github.io/GitGui/" target="_blank"><p>
 								Logging work to your assigned unresolved tickets, given that you are using atlassian Jira can be automated through cli. 
 								The shell scripts automatically log work, in case of commit, eihter you are working on git or svn or Mercurial
