@@ -422,7 +422,7 @@ font-weight: 600;
 .work-grid-info {
 background:#ffffff;
 padding: 20px 18px;
-min-height: 285px;
+min-height: 295px;
 }
 .work-grid-info h4{
   font-family: 'Lato', sans-serif;
@@ -534,7 +534,7 @@ min-height: 285px;
 .gallery-section h3{
    margin: 0;
   color: #ffffff;
-  font-size: 34px;
+  font-size: 32px;
   font-weight: 500;
   letter-spacing: 18px;
 }
